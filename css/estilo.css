@@ -1,0 +1,183 @@
+/* CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Agregado para evitar problemas de caja */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F4F4F4; /* Cambio en el color de fondo */
+    color: #333; /* Cambio en el color de texto predeterminado */
+}
+
+/* Header */
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: #0C3D91; /* Color de fondo más apropiado */
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2); /* Cambio en la sombra */
+}
+
+.encabezado h1 {
+    text-transform: uppercase;
+    font-weight: 700; /* Aumento de peso de fuente */
+    font-size: 2rem;
+    color: #EFEFEF; /* Cambio en el color del texto */
+    margin-left: 20px; /* Espacio en el lado izquierdo del encabezado */
+}
+
+.boton {
+    background-color: #EFEFEF;
+    color: #333;
+    font-weight: 700;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-right: 20px; /* Espacio en el lado derecho del encabezado */
+}
+
+.boton:hover {
+    background-color: #333;
+    color: #EFEFEF;
+}
+
+.encabezado ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center; /* Alineación vertical del menú */
+    margin-right: 20px; /* Espacio en el lado derecho del encabezado */
+}
+
+.encabezado li {
+    margin: 0 20px;
+}
+
+.encabezado li a {
+    text-decoration: none;
+    color: #EFEFEF;
+    font-size: 1.5rem;
+}
+
+.encabezado li a:hover {
+    color: #FFD700; /* Cambio en el color al pasar el mouse */
+}
+
+/* Banner */
+
+.banner {
+    background-image: url("../img/banner.jpg"); /* Ruta de la imagen corregida */
+    height: calc(100vh - 80px);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.bannerContenido {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.bannerContenido h2 {
+    font-size: 2.5rem;
+    font-weight: 700; /* Aumento de peso de fuente */
+    color: #EFEFEF;
+    margin-bottom: 10px;
+}
+
+.bannerContenido p {
+    color: #EFEFEF;
+    font-size: 2rem; /* Cambio en el tamaño de fuente */
+    font-weight: 600; /* Aumento de peso de fuente */
+    text-align: center;
+}
+
+.bannerContenido .boton {
+    margin-top: 10px;
+    background-color: #FFD700; /* Cambio en el color del botón */
+    color: #333;
+    padding: 15px 30px; /* Aumento del tamaño del botón */
+    font-size: 1.4rem; /* Cambio en el tamaño de fuente del botón */
+    border: 2px solid #FFD700; /* Agregado un borde al botón */
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+
+.bannerContenido .boton:hover {
+    background-color: #333;
+    color: #EFEFEF;
+    cursor: pointer;
+    border-color: #333; /* Cambio en el color del borde al pasar el mouse */
+}
+
+/* Categorías de Productos */
+
+#categorias {
+    text-align: center;
+    margin: 5vh 0; /* Espacio superior e inferior ajustado */
+    border-bottom: 2px solid #FFD700; /* Cambio en el estilo del borde inferior */
+    padding-bottom: 20px; /* Espacio inferior */
+}
+
+#categorias h3 {
+    color: #0C3D91; /* Color de título más apropiado */
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+#categorias p {
+    font-size: 2rem;
+    color: #333;
+    margin-top: 10px; /* Espacio superior */
+}
+
+.contenedorproductos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.productos {
+    border: 1px solid #EFEFEF;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.productos img {
+    max-width: 100%;
+}
+
+.productos p {
+    margin: 10px 0;
+    color: #0C3D91; /* Cambio en el color del texto */
+    font-weight: 600;
+}
+
+.productos button {
+    background-color: #FFD700;
+}
